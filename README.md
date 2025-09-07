@@ -2,7 +2,7 @@
 
 ## 📌 Overview
 
-This project is a sample **monorepo** that shows you how to run a Next.js frontend and a FastAPI backend using **Docker Compose**. With a single command, you can start the entire system without worrying about local dependencies—everything runs inside containers.
+This project is a sample **monorepo** that shows you how to run a Next.js frontend and a FastAPI backend using **Docker Compose**. With a single command, you can start the entire system without worrying about local dependencies — everything runs inside containers.
 
 ---
 
@@ -11,7 +11,6 @@ This project is a sample **monorepo** that shows you how to run a Next.js fronte
 Before you get started, make sure you have the following installed:
 
 - **Docker** (latest version recommended)
-- **Docker Compose**
 
 ---
 
