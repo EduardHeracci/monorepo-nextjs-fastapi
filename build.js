@@ -14,17 +14,6 @@ generateEnvFile(environment);
 if (environment === "local") {
   process.exit(0);
 }
-// Command to build the Docker image
-const buildCommand = "docker";
-const buildArgs = [
-  "build",
-  "--no-cache",
-  "-f",
-  "Dockerfile.production",
-  ".",
-  "-t",
-  "goldcity-img:latest",
-];
 
 // Execute the Docker build command within the root directory
 const buildProcess = spawn(buildCommand, buildArgs, { cwd: rootDirectory });
@@ -51,16 +40,16 @@ function generateEnvFile(environment) {
   const envConfig = {
     production: {
       NEXT_PUBLIC_DIRECTUS_URL:
-        "https://goldcity-container.afk1ilfguv2qq.ap-southeast-1.cs.amazonlightsail.com/directus/",
+        "",
       NEXT_PUBLIC_DIRECTUS_BASE_URL:
-        "https://goldcity-container.afk1ilfguv2qq.ap-southeast-1.cs.amazonlightsail.com/directus/",
+        "",
       NEXT_AUTH_URL:
-        "https://goldcity-container.afk1ilfguv2qq.ap-southeast-1.cs.amazonlightsail.com/login",
-      NEXT_PUBLIC_DIR_URL: "http://localhost:8055/",
+        "",
+      NEXT_PUBLIC_DIR_URL: "",
       NEXT_PUBLIC_URL:
-        "https://goldcity-container.afk1ilfguv2qq.ap-southeast-1.cs.amazonlightsail.com",
+        "",
       WEBSOCKET_URL:
-        "wss://goldcity-container.afk1ilfguv2qq.ap-southeast-1.cs.amazonlightsail.com/directus/websocket",
+        "",
     },
     local: {
       NEXT_PUBLIC_FAST_API_URL: "http://localhost/backend/",
@@ -71,12 +60,12 @@ function generateEnvFile(environment) {
     //   WEBSOCKET_URL: "ws://localhost/directus/websocket",
     },
     local_production: {
-      NEXT_PUBLIC_DIRECTUS_URL: "http://localhost/directus/",
-      NEXT_PUBLIC_DIRECTUS_BASE_URL: "http://localhost/directus/",
-      NEXT_PUBLIC_DIR_URL: "http://localhost:8055/",
-      NEXT_PUBLIC_APP_URL: "http://localhost/",
-      NEXT_AUTH_URL: "http://localhost/",
-      WEBSOCKET_URL: "ws://localhost/directus/websocket",
+      NEXT_PUBLIC_DIRECTUS_URL: "",
+      NEXT_PUBLIC_DIRECTUS_BASE_URL: "",
+      NEXT_PUBLIC_DIR_URL: "",
+      NEXT_PUBLIC_APP_URL: "",
+      NEXT_AUTH_URL: "",
+      WEBSOCKET_URL: "",
     },
   };
 
