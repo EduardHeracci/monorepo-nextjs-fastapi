@@ -3,7 +3,6 @@ from .config import Settings
 
 settings = Settings()
 
-# PostgreSQL does not need `connect_args`
 engine = create_engine(settings.database_url, echo=True)
 
 
